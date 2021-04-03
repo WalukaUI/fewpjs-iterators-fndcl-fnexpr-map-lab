@@ -11,6 +11,16 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+// const titleCased = () => {
+//   return tutorials
+// }
+
+
+// returning same results, but test is not passing 
+
+const titleCased = tutorials.map(function(strings){
+  let firstCharactor=strings.charAt(0).toUpperCase()
+  let fullString =firstCharactor+strings.slice(1,strings.length)
+  return fullString;
+}); 
+console.log(titleCased);
